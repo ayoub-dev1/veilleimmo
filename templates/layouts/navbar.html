@@ -1,0 +1,161 @@
+{% load static %}
+<div class="header header-light nav-left-side">
+    <nav class="headnavbar">
+        <div class="nav-header">
+            <a href="#" class="brand"><img src="{% static 'assets/img/logo2.png' %}" alt="" /></a>
+            <button class="toggle-bar"><span class="ti-align-justify"></span></button>	
+        </div>								
+        <ul class="menu">
+        
+            <li class="dropdown">
+                <a class="active" href="JavaScript:Void(0);">Acceuil</a>
+              
+            </li>
+            
+            <li class="dropdown">
+                <a href="">Action</a>
+                <ul class="dropdown-menu">
+                    <li class="">
+                        <a href="{% url 'marque:ajouter-marque' %}">Ajouter Marque</a>
+                                                   
+                    </li>
+                    <li class="dropdown">
+                        <a href="JavaScript:Void(0);"> Ajouter Projet</a>
+                                                     
+                    </li>
+                    <li class="dropdown">
+                        <a href="JavaScript:Void(0);">With Map Layouts</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="list-layout-with-map.html">List With Map</a></li>                                    
+                            <li><a href="grid-layout-with-map.html">Grid With Map</a></li>                                    
+                            <li><a href="classical-layout-with-map.html">Classical With Map</a></li>                                    
+                            <li><a href="half-map.html">Half Map Search</a></li>   
+                        </ul>                                 
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="dropdown">
+                <a href="JavaScript:Void(0);">Offres</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown">
+                        <a href="JavaScript:Void(0);">Single Property</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="single-property-1.html">Single Property 1</a></li>                                    
+                            <li><a href="single-property-2.html">Single Property 2</a></li>                                    
+                            <li><a href="single-property-3.html">Single Property 3</a></li>                                       
+                        </ul>                                 
+                    </li>
+                    <li class="dropdown">
+                        <a href="JavaScript:Void(0);">Agencies & Agents</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="agents.html">Agents List</a></li>                                    
+                            <li><a href="agent-page.html">Agent Page</a></li>                                    
+                            <li><a href="agencies.html">Agencies List</a></li>                                    
+                            <li><a href="agency-page.html">Agency Page</a></li>   
+                        </ul>                                
+                    </li>
+                    <li class="dropdown">
+                        <a href="JavaScript:Void(0);">My Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="my-profile.html">My Profile</a></li>                                    
+                            <li><a href="my-property.html">Property List</a></li>                                    
+                            <li><a href="bookmark-list.html">Bookmarked Listings</a></li>                                    
+                            <li><a href="change-password.html">Change Password</a></li>   
+                        </ul>                                 
+                    </li>
+                    <li>
+                        <a href="compare-property.html">Compare Property</a>                                
+                    </li>
+                    <li>
+                        <a href="submit-property.html">Submit Property</a>                                
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="megamenu" data-width="500">
+                <a href="#">Commerciaux</a>
+                <div class="megamenu-content">
+                    <div class="mg-menu">
+                        <ul>
+                            <li>
+                                <a href="blog.html">
+                                    <div class="mg-menu-items">
+                                        <i class="ti-layout-grid2"></i>
+                                        <h5>Blog Page<span>Checkout Our Articles</span></h5>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="blog-detail.html">
+                                    <div class="mg-menu-items">
+                                        <i class="ti-layout"></i>
+                                        <h5>Blog Detail<span>Detail Blog Page Design</span></h5>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="pricing.html">
+                                    <div class="mg-menu-items">
+                                        <i class="ti-credit-card"></i>
+                                        <h5>Pricing Page<span>Our Latest Offers & Package</span></h5>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="contact.html">
+                                    <div class="mg-menu-items">
+                                        <i class="ti-location-pin"></i>
+                                        <h5>Contact Us<span>Need Help? Get In Touch</span></h5>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="component.html">
+                                    <div class="mg-menu-items">
+                                        <i class="ti-ruler-pencil"></i>
+                                        <h5>Component<span>List of All Components</span></h5>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="404.html">
+                                    <div class="mg-menu-items">
+                                        <i class="ti-face-sad"></i>
+                                        <h5>Error Page<span>Error Page Design</span></h5>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+           
+            
+        </ul>
+            
+    
+        {% if request.user.is_authenticated %}
+        <ul class="attributes">
+            <li><a href="#" data-toggle="modal" data-target="#signup">Profile</a></li>
+            <li class="login-attri theme-log"><a href="{% url 'logout' %}   " >logout</a></li>
+        </ul>
+        {% else %}
+
+        <ul class="attributes">
+            <!-- <li><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li> -->
+            <li class="login-attri theme-log"><a href="{% url 'login' %}">Log In</a></li>
+        </ul>
+
+        {% endif %}
+        
+    </nav>
+</div>
+
+<div class="clearfix"></div>

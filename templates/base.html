@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+        <title>Allianze</title>
+		
+        <!-- All Plugins Css -->
+        <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/nav.css' %}" />
+		
+		
+        <!-- Custom CSS -->
+        <link href="{% static 'assets/css/styles.css' %}" rel="stylesheet">
+		
+		<!-- Custom Color Option -->
+		<link href="{% static 'assets/css/colors.css' %}" rel="stylesheet">
+		
+    </head>
+
+
+<body class="green-skin">
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <div id="preloader">
+            <div class="preloader"><span></span><span></span></div></div>
+
+
+            <div id="main-wrapper">
+                {% include 'layouts/navbar.html' %}
+
+                {% block content %}
+
+                {% endblock  %}
+
+                {% include 'layouts/footer.html' %}
+
+            </div>
+        
+        
+</body>
+
+
+    

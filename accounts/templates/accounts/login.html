@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- <form method="post"> {% csrf_token %}
+{{form}}
+<input type="submit" value="login">
+</form> -->
+<div class="" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+        <div class="modal-content" id="registermodal">
+            <div class="modal-body">
+                <h4 class="modal-header-title">connexion</h4>
+                <div class="login-form">
+                    <form method="POST"> {% csrf_token %}
+                    
+                        <div class="form-group">
+                            <label>nom d'utilisateur</label>
+                            <div class="input-with-icon">
+                                <!-- <input type="text" class="form-control" name="query" placeholder="Username"> -->
+                                {{form.query}}
+                                <i class="ti-user"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Mot de passe</label>
+                            <div class="input-with-icon">
+                                <!-- <input type="password" class="form-control" placeholder="*******"> -->
+                                {{form.password}}
+                                <i class="ti-unlock"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-md full-width pop-login">Login</button>
+                        </div>
+                    
+                    </form>
+                </div>
+                <div class="text-center">
+                    <p class="mt-5"><a href="#" class="link">Mot de passe oublié ?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

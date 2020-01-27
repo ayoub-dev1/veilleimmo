@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="image-cover hero-banner" style="background:url({% static 'assets/img/city.svg' %}) no-repeat;">
+    <div class="container">
+        <div class="hero-search-wrap">
+            <div class="hero-search">
+                <h1>Find Your Dream</h1>
+            </div>
+            <div class="hero-search-content">
+                
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <input type="text" class="form-control" placeholder="Neighborhood">
+                                <i class="ti-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <input type="text" class="form-control" placeholder="Minimum">
+                                <i class="ti-money"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <input type="text" class="form-control" placeholder="Maximum">
+                                <i class="ti-money"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <select id="bedrooms" class="form-control select2-hidden-accessible" data-select2-id="bedrooms" tabindex="-1" aria-hidden="true">
+                                    <option value="" data-select2-id="2">&nbsp;</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: 215px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-bedrooms-container"><span class="select2-selection__rendered" id="select2-bedrooms-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Bedrooms</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <i class="fas fa-bed"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <select id="bathrooms" class="form-control select2-hidden-accessible" data-select2-id="bathrooms" tabindex="-1" aria-hidden="true">
+                                    <option value="" data-select2-id="4">&nbsp;</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: 215px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-bathrooms-container"><span class="select2-selection__rendered" id="select2-bathrooms-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Bathrooms</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <i class="fas fa-bath"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <div class="input-with-icon">
+                                <select id="cities" class="form-control select2-hidden-accessible" data-select2-id="cities" tabindex="-1" aria-hidden="true">
+                                    <option value="" data-select2-id="6">&nbsp;</option>
+                                    <option value="1">Los Angeles, CA</option>
+                                    <option value="2">New York City, NY</option>
+                                    <option value="3">Chicago, IL</option>
+                                    <option value="4">Houston, TX</option>
+                                    <option value="5">Philadelphia, PA</option>
+                                    <option value="6">San Antonio, TX</option>
+                                    <option value="7">San Jose, CA</option>
+                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="5" style="width: 460px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cities-container"><span class="select2-selection__rendered" id="select2-cities-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">All Cities</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <i class="ti-briefcase"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="hero-search-action">
+                <a href="#" class="btn search-btn">Search Result</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

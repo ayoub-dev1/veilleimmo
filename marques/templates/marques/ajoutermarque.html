@@ -20,7 +20,6 @@
     <div class="col-lg-7 col-md-7">
 <form method="POST"> {% csrf_token %}
 
-    {{form.promoteur}}
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="form-group">
@@ -41,6 +40,12 @@
             <label>adresse siege social</label>
             <!-- <input type="text" class="form-control simple"> -->
             {{form.adresse_siege_social}}
+        </div>
+
+        <div class="form-group">
+            <label>Promoteur</label>
+            <!-- <input type="text" class="form-control simple"> -->
+            {{form.promoteur}}
         </div>
         <div class="form-group">
             <button class="btn btn-theme" type="submit">Ajouter Promoteur</button>

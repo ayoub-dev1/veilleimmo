@@ -42,6 +42,7 @@ class User(AbstractUser):
     is_active = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     # add is_promoteur
+    is_promoteur = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
 
     objects = UserManager()

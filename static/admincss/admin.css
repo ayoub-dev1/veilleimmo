@@ -1,0 +1,41 @@
+#header {
+height: 50px;
+background: #00ba74;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00ba74, #00ba74);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00ba74, #00ba74); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#branding h1 {
+  color: #FFF
+}
+
+a:link,
+a:visited {
+    color: #10284e;
+}
+
+div.breadcrumbs {
+  background:#045FB4;
+}
+
+.text-logo {
+  color: white !important;
+  font-weight: bold;
+}
+
+#user-tools {
+  color: white;
+  font-weight: bold;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #00ba74;
+}
+
+.button, input[type=submit],input[type=button], .submit-row input, a.button {
+  background: #00ba74;
+  color: #FFF;
+}ul li {
+	color: blue;
+}

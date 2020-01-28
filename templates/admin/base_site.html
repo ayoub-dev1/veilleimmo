@@ -3,11 +3,14 @@
 {% block branding %}
 
 	<h1 id="head">
-           <a href="{% url 'admin:index' %}">Taha</a>
+           <a href="{% url 'admin:index' %}" class="text-logo">
+		   VEILLEIMMO
+			{% comment %} <img src="{% static 'assets/img/logo2.png' %}" />		    {% endcomment %}
+		   </a>
 
 	</h1>
 {% endblock %}
 
 {% block extrastyle %}
-	<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+	<link rel="stylesheet" href="{% static 'admincss/admin.css' %}">
 {% endblock %}

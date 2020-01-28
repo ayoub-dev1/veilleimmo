@@ -1034,3 +1034,9 @@ Grid
     width: 91.66%; }
   .core-nav .nav-row .col-xs-12 {
     width: 100%; } }
+
+
+  .selectmultiply {
+    height: auto;
+    min-width: 150px;
+  }

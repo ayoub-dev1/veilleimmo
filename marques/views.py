@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import  ListView,CreateView
 from promoteurs.models import  Promoteur
 from .models import  Marque
-from .forms import  MarqueForm
+from .forms import  CreationMarqueForm
 
 
 
@@ -19,7 +19,7 @@ class ListMarque(ListView):
 
 
 class CreateMarqueView(CreateView):
-    form_class = MarqueForm
+    form_class = CreationMarqueForm
     template_name = 'marques/ajoutermarque.html'
     success_url = '/'
 
@@ -30,3 +30,5 @@ class CreateMarqueView(CreateView):
         print(request)
         print(request.POST)
         return initial
+
+        

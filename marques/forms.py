@@ -1,16 +1,21 @@
+
 from django import  forms
 from .models import  Marque
+   
 
 
-class MarqueForm(forms.ModelForm):
+
+
+
+class CreationMarqueForm(forms.ModelForm):
     class Meta:
         model = Marque
-        fields  = ['promoteur', 'nom_marque', 'site_web', 'adresse_siege_social']
+        fields  = [ 'nom_marque', 'site_web', 'adresse_siege_social', 'promoteur']
         widgets = {
             'adresse_siege_social': forms.Textarea(attrs={'class':'form-control simple'}),
             'nom_marque': forms.TextInput(attrs={'class':'form-control simple'}),
             'site_web': forms.TextInput(attrs={'class':'form-control simple'}),
-            'promoteur': forms.TextInput(attrs={'class':'form-control simple', "type":"hidden"}),
+            'promoteur': forms.Select(attrs={'class':'form-control simple selectmultiply'})
         }
 
     

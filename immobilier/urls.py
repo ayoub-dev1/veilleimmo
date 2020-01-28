@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from .views import  home
-from accounts.views import  LoginView, RegisterPromoreurView
+from accounts.views import  LoginView, RegisterPromoreurView,RegisterPromoreur
 from django.contrib.auth.views import LogoutView
 from contacts.views import  SendContactForm
 
@@ -14,10 +14,16 @@ urlpatterns = [
     #Account
     path('login/', LoginView.as_view(), name="login"),
     path('logout/', LogoutView.as_view(), name="logout"),
-    path('ajouterpromoteur/',RegisterPromoreurView.as_view(), name="ajouter-promoteur"),
+    path('ajouterutilisateur/',RegisterPromoreurView.as_view(), name="ajouter-utilisateur"),
 
     #Contact
     path('contact/', SendContactForm.as_view(), name="contact"),
     #Marque
     path('marques/', include('marques.urls',namespace="marque")),
+
+    #Promoteurs
+    path('promoteur/', include('promoteurs.urls', namespace="promoteurs")),
+
+    #Project
+    path('projects/', include('projets.urls', namespace="projects"))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

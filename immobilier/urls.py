@@ -7,6 +7,8 @@ from accounts.views import  LoginView, RegisterPromoreurView,RegisterPromoreur
 from django.contrib.auth.views import LogoutView
 from contacts.views import  SendContactForm
 
+from offres.views import  CreateFormView,loadBien
+
 urlpatterns = [
     path('', home, name="home"),
     path('admin/', admin.site.urls),
@@ -25,5 +27,9 @@ urlpatterns = [
     path('promoteur/', include('promoteurs.urls', namespace="promoteurs")),
 
     #Project
-    path('projects/', include('projets.urls', namespace="projects"))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('projects/', include('projets.urls', namespace="projects")),
+
+    #Offres
+    path('offre/ajouter/', CreateFormView.as_view(), name="ajouter-offre"),
+    path('ajax/loads-bien',loadBien , name="loads-biens")
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

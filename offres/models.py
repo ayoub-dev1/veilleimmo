@@ -1,11 +1,22 @@
 from django.db import models
 from projets.models import Projet
+from categories.models import  Categorie
+
+
+class TypeBien(models.Model):
+    nom_type_bien = models.CharField(max_length=64)
+    update        = models.DateTimeField(auto_now=True, auto_now_add=False)
+    categorie     = models.ForeignKey(Categorie, on_delete=models.DO_NOTHING)
+    timestamp     = models.DateTimeField(auto_now=False, auto_now_add=True)
+
+    def __str__(self):
+        return str(self.nom_type_bien) + " to " + str(self.categorie)
 
 
 # Offre : Residentiel, Foncier , Commerce
 class Offre(models.Model):
-    categorie = models.CharField(max_length=128)
-    type_bien = models.CharField(max_length=128)
+    categorie = models.ForeignKey(Categorie, on_delete=models.DO_NOTHING)
+    type_bien = models.ForeignKey(TypeBien, on_delete=models.DO_NOTHING)
     superfecie_min = models.IntegerField()
     superfecie_max = models.IntegerField()
     id_project = models.ForeignKey(Projet, on_delete=models.DO_NOTHING)
@@ -61,3 +72,6 @@ class ModalitePaiment(models.Model):
     vis_a_vis =  models.CharField(max_length=255)
     nombre_facade = models.IntegerField()
     utilisation_RDC = models.CharField(max_length=128, choices=UTILISATION_RDC)
+
+
+

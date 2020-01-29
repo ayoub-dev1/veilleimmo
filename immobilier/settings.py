@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'projets.apps.ProjetsConfig',
     'offres.apps.OffresConfig',
     'contacts.apps.ContactsConfig',
+    'categories.apps.CategoriesConfig',
 ]
 
 
